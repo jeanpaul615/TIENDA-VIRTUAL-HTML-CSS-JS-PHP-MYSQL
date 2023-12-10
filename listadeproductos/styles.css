@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #141C29;
+    padding-top: 80px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Modificado para centrar correctamente en pantallas más pequeñas */
+    gap: 15%;
+    height: 70px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.scroll {
+    background-color: aliceblue;
+    box-shadow: 0.1rem 0.2rem 0.3rem #333;
+}
+
+.scroll img {
+    filter: invert(15%);
+}
+
+.scroll h1 {
+    color: #141C29;
+}
+
+.scroll p {
+    color: #141C29;
+    font-weight: bold;
+}
+
+.carrito,
+.eliminar,
+.agregar {
+    filter: invert(100%);
+    background-color: transparent;
+    width: 45px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Ajustado para espaciado uniforme */
+    margin-bottom: 20px;
+}
+
+.contenedor>div {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #2D4263;
+    border-radius: 20px;
+}
+
+.contenedor>div:hover {
+    background-color: #d11010;
+}
+
+.informacion {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.informacion>p:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.informacion .precio {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.informacion .precio span {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.informacion button {
+    background-color: #263143;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.informacion button:hover {
+    background-color: #2D4263;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    img {
+        width: 100%; /* Hace que la imagen sea 100% del ancho del contenedor */
+        height: auto;
+    }
+}
+
+.modal button{
+    background-color: #4f11b3;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color:#141C29;
+}
+
+dialog#modal,#modal-eliminar {
+    background-color: #000000;
+    color: beige;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Ajusta el ancho según tus necesidades */
+    max-width: 600px; /* Establece un ancho máximo si lo deseas */
+}
+
+
+button#btn-cerrar-modal,#btn-cerrar-modal-eliminar {
+    color:#141C29;
+    background-color: rgb(5, 156, 70);
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+        margin-left: auto;  
+    margin-right: auto; 
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 70%;
+    box-sizing: border-box;
+    color: #141C29;
+    margin-left: auto;  
+    margin-right: auto; 
+
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Agregada transición para suavizar cambios */
+}
+
+button:hover {
+    background-color: #e72525;
+}
+
+button:hover img{
+    filter: invert(1); /* Invierte los colores de la imagen al hacer hover */
+}
+
+button#btn-abrir-modal{
+ background-color: transparent;
+}
+
+button#btn-abrir-modal-eliminar{
+    background-color: transparent;
+   }
+
+.carrito-container {
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #080202; /* Color del texto */
+    margin-left: 10px; /* Márgen izquierdo para mover a la izquierda */
+    margin-right: 10px; /* Márgen derecho para separar del borde derecho */
+}
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <? 
+    include("Verificacion.php");
+    ?>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+    <div class="login-box">
+        <h1>Login</h1>
+        <form method="POST" action="Verificacion.php">
+            <div class="user-box">
+                <input type="text" name="username" id="username">
+                <label >Username:</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" id="password">
+                <label>Password:</label>
+            </div>
+            <div class="forgot-box">
+                <label>Forgot Password?</label>
+            </div>
+            <input class="btn" name="btningresar" type="submit" value ="Iniciar Sesion">
+        </form>
+        <div class="social-text">
+            <label>Login with social accounts</label>
+        </div>
+        <div class="social-images">
+            <img src="logogoogle.png" alt="Logos1">
+            <img src="logotwitter.png" alt="Logos2">
+            <img src="logogithub.png" alt="Logos3">
+        </div>
+        <div class="social-text2">
+            <label>Don't have an account? Sign up</label>
+        </div>
+    </div>
+</body>
+</html>

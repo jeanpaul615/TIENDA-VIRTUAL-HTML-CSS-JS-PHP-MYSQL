@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <title>COMIDAS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="proyecto.css">
+
+    
+</head>
+
+<body>
+    <header>
+
+        <div class="menu container">
+            
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="../ListProducts/index.php">Productos</a></li>
+                    </ul>
+                </div>
+                <img class="logo-2" src="images/logo.svg" alt="">
+
+                <div class="menu-2">
+                    <ul>
+                        <li><a href="#">Horario</a></li>
+                    </ul>
+                    <div class="socials">
+                        <a href="#">
+                            <div class="social">
+                                <img src="images/s1.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="images/s2.svg" alt="">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="social">
+                                <img src="images/s3.svg" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+
+            <div class="swiper mySwiper-1">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Hamburguesa</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quas nulla eum
+                                    excepturi, provident suscipit beatae, consequuntur esse optio officiis animi
+                                    aperiam? Id, ea? Voluptatum libero cum sed illum ad.
+                                </p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1">Comprar</a>
+                                    <a href="#" class="btn-1">Menu</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/slider1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Perro Caliente</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quas nulla eum
+                                    excepturi, provident suscipit beatae, consequuntur esse optio officiis animi
+                                    aperiam? Id, ea? Voluptatum libero cum sed illum ad.
+                                </p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1">Comprar</a>
+                                    <a href="#" class="btn-1">Menu</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/slider2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="slider">
+                            <div class="slider-txt">
+                                <h1>Sandwich</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quas nulla eum
+                                    excepturi, provident suscipit beatae, consequuntur esse optio officiis animi
+                                    aperiam? Id, ea? Voluptatum libero cum sed illum ad.
+                                </p>
+                                <div class="botones">
+                                    <a href="#" class="btn-1">Comprar</a>
+                                    <a href="#" class="btn-1">Menu</a>
+                                </div>
+                            </div>
+                            <div class="slider-img">
+                                <img src="images/slider3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </header>
+<section>
+    <main class="products">
+        <div class="containerproducts">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" justify-content-center id="navId" role="tablist">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" data-bs-toggle="tab" aria-current="page">INICIO</a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a href="burguer.html" class="nav-link" data-bs-toggle="tab">HAMBURGUESA</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a href="burrito.html" class="nav-link" data-bs-toggle="tab">BURRITO</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+                <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+                <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+                <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+                <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+            </div>
+
+            <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
+            <script>
+                var triggerEl = document.querySelector('#navId a')
+                bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+            </script>
+
+            <!-- CONTENIDO PRINCIPAL -->
+
+            <div class="row">
+                <div id="contentBack" class="col-2">
+                    
+                </div>
+
+                <div id="contentPrimerImg" class="col-3">
+
+                </div>
+
+                <div class="col-2"  id="contentDescription">
+
+                </div>
+
+                <div class="col-3" id="contentSegundaImg">
+
+                </div>
+
+                <div class="col-2" id="contentNext">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    </main>
+</section>
+
+    <section class="info container">
+
+        <div class="info-img">
+            <img src="images/info.png" alt="">
+
+        </div>
+        <div class="info-txt">
+            <h2>Informacion</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor minus repellendus, in unde, neque
+                molestias iure nemo, enim quaerat libero quae recusandae sit ipsa beatae fugiat qui aut blanditiis
+                ullam!
+            </p>
+            <a href="#" class = "btn-2">Mas Informacion</a>
+
+        </div>
+    </section>
+
+    <section class = "horario">
+        <div class = "horario-info container" >
+            <h2>Horario</h2>
+            <div class = "horario-txt">
+                <div class = "txt">
+                    <h4>Direccion</h4>
+                    <p>
+                        Manzana A casa 9 
+                    </p>
+                    <p>
+                        VILLA CLARA
+                    </p>
+                </div>
+                <div class = "txt">
+                    <h4>Horario</h4>
+                    <p>
+                        LUNES-VIERNES : 9AM - 8PM
+                    </p>
+                    <p>
+                        SABADO-DOMINGO : 11AM - 8PM
+                    </p>
+                </div>
+
+                <div class = "txt">
+                    <h4>Telefono</h4>
+                    <p>
+                        3203956315
+                    </p>
+                </div>
+
+                <div class = "txt">
+                        <h4>Redes Sociales</h4>
+                        <div class="socials">
+                            <a href="#">
+                                <div class="social">
+                                    <img src="images/s1.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="social">
+                                    <img src="images/s2.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="social">
+                                    <img src="images/s3.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section>
+    <iframe class = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.7067573530785!2d-75.6799395!3d4.8203294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3887b1e8d8d631%3A0x8a4dde02f2b7d5ec!2svilla%20clara!5e0!3m2!1ses-419!2sco!4v1694490796854!5m2!1ses-419!2sco" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<footer class = "footer container">
+    <img class = "logo-2" src="images/logo.svg" alt="">
+    <div class = "links">
+        <h4>Lorem</h4>
+        <ul>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+        </ul>
+    </div>
+
+    <div class = "links">
+        <h4>Lorem</h4>
+        <ul>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+        </ul>
+    </div>
+
+    <div class = "links">
+        <h4>Lorem</h4>
+        <ul>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+            <li><a href="#">lorem</a></li>
+        </ul>
+    </div>
+
+    <div class = "links">
+        <h4>Lorem</h4>
+        <div class="socials">
+            <a href="#">
+                <div class="social">
+                    <img src="images/s1.svg" alt="">
+                </div>
+            </a>
+            <a href="#">
+                <div class="social">
+                    <img src="images/s2.svg" alt="">
+                </div>
+            </a>
+            <a href="#">
+                <div class="social">
+                    <img src="images/s3.svg" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="proyecto.js"></script>
+</body>
+
+
+</html>
