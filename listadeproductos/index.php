@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php
+include ("config.php");
+$db = new Database();
+
+$con = $db->conectar();
+$sql = $con->prepare("SELECT id,NombreArticulo,Precio FROM articulos");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC); 
+?>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Lista De Productos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header" class="scroll">
+        <h1>Lista de Articulos</h1> 
+        <button type="button" id="btn-abrir-modal"><img class="agregar" src="images/agregar.png">
+</button>
+        <dialog id="modal">
+            <h2>Agregar</h2>
+            <p></p>
+            <p></p>
+            <form method="POST" class="modal-form" action="insercion.php">
+            <label for="id">ID</label>
+            <input type="number" id="id" name="id" placeholder="Ingrese el ID">
+
+            <label for="nombreArticulo">Nombre del Artículo</label>
+            <input type="text" id="NombreArticulo" name="NombreArticulo" placeholder="Ingrese el nombre" required>
+
+            <label for="descripcion">Descripción</label>
+            <input type="text" id="Descripcion" name="Descripcion" placeholder="Ingrese la descripción" required>
+
+            <label for="precio">Precio</label>
+            <input type="number" id="Precio" name="Precio" placeholder="Ingrese el precio" required>
+
+            <button id="btn-cerrar-modal" type="submit">Guardar</button>
+            </form>
+
+        </dialog>
+
+        <button type ="button" id="btn-abrir-modal-eliminar"><img class="eliminar" src="images/eliminar.png">
+</button>
+        <dialog id="modal-eliminar">
+            <h2>Eliminar</h2>
+            <p></p>
+            <p></p>
+            <form method="POST" class="modal-form" action="delete.php">
+            <label for="NombreArticulo">Nombre Del Articulo</label>
+            <input type="text" id="NombreArticulo" name="NombreArticulo" placeholder="Ingrese el Nombre Del Articulo" required>
+            <button id="btn-cerrar-modal-eliminar" type="submit">Eliminar</button>
+            </form>
+        </dialog>
+
+        <div class="carrito-container">
+            <a href="../carrodecompras/index.php">
+            <img class="carrito" src="images/carrito-de-compras.png" alt="carrito">
+            </a>
+            <p class="contador">0</p>
+        </div>
+
+    </header>
+    <div id="contenedor" class="contenedor">
+        <?php 
+        foreach ($resultado as $row): ?>
+            <div class="producto">
+                <?php
+                $id = $row['id'];
+                $imagen = "images/productos/". $id ."/imagen.webp";
+                if(!file_exists($imagen)){
+                    $imagen = "images/no-photo.webp";
+                }
+                ?>
+                <img src="<?php echo $imagen;?>" 
+                alt="<?php echo $row['NombreArticulo'] ?>">
+                <div class="informacion">
+                    <p><?php echo $row['NombreArticulo'] ?></p>
+                    <p class="precio">$<?php echo $row['Precio'] ?><span>.00</span></p>
+                    <button onclick="CarritoComprar(<?php echo $id ?>)">Comprar</button>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

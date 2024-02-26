@@ -11,8 +11,8 @@ if (!empty($_POST["btningresar"])) {
         
         if ($datos = $sql->fetch(PDO::FETCH_ASSOC)) {
             // Modificado para devolver un JSON con éxito y los datos
+            header('Location: ../proyecto/index.html');
 
-            echo json_encode(['success' => true, 'data' => $datos]);
 
         } else {
             // Modificado para devolver un JSON con error en lugar de un mensaje de texto
