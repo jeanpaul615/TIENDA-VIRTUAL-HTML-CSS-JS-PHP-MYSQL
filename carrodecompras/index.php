@@ -5,7 +5,7 @@ include ("enlace.php");
 $db = new Database();
 
 $con = $db->conectar();
-$sql = $con->prepare("SELECT id,NombreArticulo,Precio FROM carrito");
+$sql = $con->prepare("SELECT id,NombreArticulo,Precio,Cantidad FROM carrito");
 $sql->execute();
 $resultado = $sql->fetchAll(PDO::FETCH_ASSOC); 
 ?>
@@ -40,6 +40,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             alt="<?php echo $row['NombreArticulo'] ?>">
             <div class="informacion">
                 <p><?php echo $row['NombreArticulo'] ?></p>
+                <p><?php echo $row['Cantidad']?></p>
                 <p class="precio">$<?php echo $row['Precio'] ?><span>.00</span></p>
                 <button>eliminar</button>
             </div>

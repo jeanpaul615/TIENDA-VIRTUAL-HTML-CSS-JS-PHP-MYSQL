@@ -12,6 +12,11 @@ header {
     justify-content: center;
 }
 
+
+img {
+    width: 200px;
+    height: 200px;
+}
 .title-container {
     display: flex;
     justify-content: space-between;
@@ -21,6 +26,7 @@ header {
 h1 {
     margin-right: 300px; /* Ajusta el valor según el espacio deseado */
 }
+
 
 .container {
     display: flex;
@@ -62,3 +68,8 @@ footer {
     padding: 20px;
     text-align: right;
 }
+
+
+
+
+

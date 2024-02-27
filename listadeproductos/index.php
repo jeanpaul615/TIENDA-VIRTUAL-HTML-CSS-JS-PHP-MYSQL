@@ -77,23 +77,25 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     </header>
     <div id="contenedor" class="contenedor">
         <?php 
-        foreach ($resultado as $row): ?>
+            foreach ($resultado as $row): ?>
+            <form method="post" action="CarritoComprar.php">
             <div class="producto">
-                <?php
+            <?php
                 $id = $row['id'];
                 $imagen = "images/productos/". $id ."/imagen.webp";
                 if(!file_exists($imagen)){
-                    $imagen = "images/no-photo.webp";
+                $imagen = "images/no-photo.webp";
                 }
-                ?>
-                <img src="<?php echo $imagen;?>" 
-                alt="<?php echo $row['NombreArticulo'] ?>">
-                <div class="informacion">
-                    <p><?php echo $row['NombreArticulo'] ?></p>
-                    <p class="precio">$<?php echo $row['Precio'] ?><span>.00</span></p>
-                    <button onclick="CarritoComprar(<?php echo $id ?>)">Comprar</button>
-                </div>
+            ?>
+            <img src="<?php echo $imagen;?>" alt="<?php echo $row['NombreArticulo'] ?>">
+            <div class="informacion">
+                <p><?php echo $row['NombreArticulo'] ?></p>
+                <p class="precio">$<?php echo $row['Precio'] ?><span>.00</span></p>
+                <input type="hidden" name="id" value="<?php echo $id ?>">
+                <button type="submit">Comprar</button>
             </div>
+            </div>
+            </form>
         <?php endforeach; ?>
     </div>
 
