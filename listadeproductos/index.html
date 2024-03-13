@@ -71,7 +71,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             <a href="../carrodecompras/index.php">
             <img class="carrito" src="images/carrito-de-compras.png" alt="carrito">
             </a>
-            <p class="contador">0</p>
+            <a type="number" id="mostrador"/>
         </div>
 
     </header>
@@ -92,7 +92,11 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                 <p><?php echo $row['NombreArticulo'] ?></p>
                 <p class="precio">$<?php echo $row['Precio'] ?><span>.00</span></p>
                 <input type="hidden" name="id" value="<?php echo $id ?>">
+<<<<<<< HEAD
                 <button type="submit">Comprar</button>
+=======
+                <button type="submit id="contador" class="contador">Comprar</button>
+>>>>>>> 512ba96e70f5fc9f0f6586efcca73340a766ba78
             </div>
             </div>
             </form>

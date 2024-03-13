@@ -1,6 +1,12 @@
 const header = document.querySelector("#header");
 const contenedor = document.querySelector("#contenedor");
 const body = document.querySelector("body");
+<<<<<<< HEAD
+=======
+const contador = document.querySelector("contador");
+
+
+>>>>>>> 512ba96e70f5fc9f0f6586efcca73340a766ba78
 
 
 window.addEventListener("scroll", function(){
@@ -37,3 +43,11 @@ btnCerrarModal.addEventListener("click",()=>{
   btnCerrarModalEliminar.addEventListener("click", () => {
       modalEliminar.close();
   });
+<<<<<<< HEAD
+=======
+
+let numero = 0;
+contador.onclick = () => {
+    contador.value = numero;
+}
+>>>>>>> 512ba96e70f5fc9f0f6586efcca73340a766ba78
