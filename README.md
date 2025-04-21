@@ -1,6 +1,4 @@
-Aquí tienes un ejemplo de un archivo `README.md` atractivo y profesional para tu proyecto **TIENDA-VIRTUAL-HTML-CSS-JS-PHP-MYSQL**:
 
----
 
 # Tienda Virtual 🛍️
 
@@ -90,12 +88,3 @@ La **Tienda Virtual** es una plataforma diseñada para facilitar la compra y ven
 
 Si tienes preguntas o sugerencias, no dudes en contactarme en [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com).
 
----
-
-## 📜 **Licencia**
-
-Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
----
-
-Con este `README.md`, tu repositorio será mucho más atractivo y comprensible para colaboradores y visitantes. ¿Te gustaría agregar algo más o personalizar alguna sección? 😊
