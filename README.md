@@ -82,9 +82,3 @@ La **Tienda Virtual** es una plataforma diseñada para facilitar la compra y ven
    ```
 5. Abre un [pull request](https://github.com/jeanpaul615/TIENDA-VIRTUAL-HTML-CSS-JS-PHP-MYSQL/pulls).
 
----
-
-## 📧 **Contacto**
-
-Si tienes preguntas o sugerencias, no dudes en contactarme en [tu-email@ejemplo.com](mailto:tu-email@ejemplo.com).
-
