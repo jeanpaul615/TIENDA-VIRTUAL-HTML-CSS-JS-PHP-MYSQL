@@ -59,7 +59,8 @@ La **Tienda Virtual** es una plataforma diseñada para facilitar la compra y ven
 
 ## 🎨 **Capturas de Pantalla**
 
-> *(Puedes agregar imágenes o capturas de pantalla para mostrar la interfaz de usuario de tu tienda virtual.)*
+![image](https://github.com/user-attachments/assets/fe1e26b2-6d18-43c3-beb8-3a05cdeb3f12)
+
 
 ---
 
